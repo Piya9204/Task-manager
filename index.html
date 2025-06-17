@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Task Manager</h1>
+    <button onclick="openModal()">+ New Task</button>
+    <div id="taskList"></div>
+  </div>
+
+  <!-- Modal -->
+  <div id="taskModal" class="modal">
+    <div class="modal-content">
+      <span onclick="closeModal()" class="close">&times;</span>
+      <h2>New Task</h2>
+      <input id="title" placeholder="Title">
+      <textarea id="description" placeholder="Description"></textarea>
+      <input type="date" id="deadline">
+      <select id="status">
+        <option>Todo</option>
+        <option>In Progress</option>
+        <option>Done</option>
+      </select>
+      <select id="priority">
+        <option>Low</option>
+        <option>Medium</option>
+        <option>High</option>
+      </select>
+      <button onclick="createTask()">Create Task</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
